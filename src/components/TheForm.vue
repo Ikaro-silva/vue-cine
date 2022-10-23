@@ -1,7 +1,10 @@
 <template>
+
   <div id="container-form">
+    
+    <h2>Crie sua sala</h2>
       <form id="form" @submit="createSala">
-        <h2>Crie sua sala</h2>
+        <div id="msg">{{Msg}}</div>
         <div id="container-input">
           <label for="nome">Nome da sala</label>
           <input type="text" alt="Nome da sala" placeholder="Nome da sala" id="nome" v-model="nome">
@@ -24,7 +27,9 @@
         data(){
           return{
             nome:null,
-            lindk:null
+            lindk:null,
+
+            Msg:""
           }
         },
          methods:{
@@ -34,7 +39,7 @@
               nome: this.nome,
               link:this.lindk,
             }
-            console.log(this.lindk)
+            // MANDAR OS DADOS DO INPUIT PARA O SERVER JSON
             const dataJson = JSON.stringify(data)
             const req = await fetch('http://localhost:3000/links',{
               method:"POST",
@@ -42,30 +47,48 @@
               body:dataJson
             })
             const res = await req.json()
-            console.log(res)
+            // APAGAR ENTRADDA DE INPUT 
+              this.nome="",
+              this.lindk=""
+            // MENSAGEM
+              this.Msg = "Sala criada com sucesso !!"
+              setTimeout(()=>this.Msg="",3000)
           }
         }
     }
 
 </script>
 
-<style>
+<style >
   body{
     background-color: rgba(0, 0, 0, 0.952);
+    color: white;
   }
   #container-form{
-    display: flex;
+    
     color: white;
     height:500px;
   }
   #form {
-    
-    margin: auto;
-    margin-top:100px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
   }
-  #form h2{
-    text-align: center;
+  h2{
     
+    text-align: center;
+    margin-top:50px;
+    
+  }
+  #msg{
+    text-align: center;
+    width: 400px;
+    background-color: #E50914;
+    font-weight: bold;
+    margin-bottom: 10px;
+
   }
   #container-input{
     display: flex;
@@ -80,6 +103,7 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 20px ;
+    width: 350px;
   }
   #button, #a{
     width: 100px;

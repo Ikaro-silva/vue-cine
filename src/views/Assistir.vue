@@ -1,15 +1,17 @@
 <template>
   <div>
-    <h3>Se Divirta</h3>
-    <Tela/>
+   
+    <ListaSala/>
   </div>
 </template>
 <script>
-import Tela from '../components/Tela.vue'
+import ListaSala from'../components/ListaSala.vue'
+
     export default{
       name:"Assistir",
       components:{
-        Tela
+        
+        ListaSala
       }
     }
 </script>
