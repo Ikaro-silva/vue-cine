@@ -1,0 +1,1 @@
+import{_ as a,L as e,r as t,o,c as n,a as c}from"./index.e6fc0f23.js";const r={name:"Assistir",components:{ListaSala:e}};function i(p,_,l,m,d,f){const s=t("ListaSala");return o(),n("div",null,[c(s)])}const L=a(r,[["render",i]]);export{L as default};
