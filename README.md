@@ -1,3 +1,15 @@
+# Istruções
+A aplicação deve esta em seu pc ou notebook desta maneira o json sever rodara pelo propt de comando ,  os comando sendo  excutados dentro da pasta de origem da aplicação 
+Para rodar a aplicação deve instalar o Json sever , usado como um " banco de dados "
+
+1-Rnstalar json sever ( npm install -g json-server)
+
+2-Rodando comando (json-server --watch db.json) ou ( npm run backend)
+
+Depois que o json serve estiver rodando voce podera acessar localmente ou aqui no github
+
+em caso de duvidas => https://www.npmjs.com/package/json-server
+
 # vue-cine
 
 This template should help get you started developing with Vue 3 in Vite.
