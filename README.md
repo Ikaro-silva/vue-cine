@@ -1,4 +1,4 @@
-# Istruções
+# Instruções
 A aplicação deve esta em seu pc ou notebook desta maneira o json sever rodara pelo propt de comando ,  os comando sendo  excutados dentro da pasta de origem da aplicação 
 Para rodar a aplicação deve instalar o Json sever , usado como um " banco de dados "
 
