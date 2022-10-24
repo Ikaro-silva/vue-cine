@@ -1,4 +1,12 @@
 # Instruções
+## Aplicação 
+Dentro da aplicação o link que é tem que ser inserido é o do youtobe 
+
+Caminho - youtube => compartilhar => incorporar  => cópia código  <iframe ....  
+                                                                  
+Criando sala - Depois do prencher o formulario , Click criar => click Assistir => click em assistir aonde esta o nome da sua sala .
+  
+## "Backend" json server 
 A aplicação deve esta em seu pc ou notebook desta maneira o json sever rodara pelo propt de comando ,  os comando sendo  excutados dentro da pasta de origem da aplicação 
 Para rodar a aplicação deve instalar o Json sever , usado como um " banco de dados "
 
